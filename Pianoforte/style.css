@@ -5,8 +5,11 @@ box-sizing: border-box;
 }
 body {
 background: linear-gradient(rgb(46, 46, 202), rgb(49, 196, 245));
+background-attachment: fixed;
 height: 100vh;
-width: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .piano {
@@ -17,15 +20,17 @@ width: 100vh;
     height: 90px;
     background-color: rgba(190, 17, 17, 0.815);
  display: flex;
+ justify-content: flex-end;
  align-items: center;
  background-image: url(images/panel-reflex.png);
  background-repeat: no-repeat;
  background-size: contain;
+ 
 }
 
 .piano-panel img {
     width: 160px;
-    margin-left: 700px;
+    
 }
 
 .piano-keys {
@@ -52,21 +57,22 @@ display: flex;
 .key-black {
     height: 60%;
     width: 32px;
-    background-color: black;
+    background: linear-gradient(#737373 10%, #0d0d0d);
     margin-right: -16px;
     margin-left: -16px;
     z-index: 2;
-
-
-}
-.key-whitee {
-    height: 100%;
-    width: 64px;
-    background-color: white;
     border-left: black 2px solid;
     border-right: black 2px solid;
     border-bottom: gray 6px solid;
     border-top: black 8px solid;
     border-radius: 0 0 8px 8px;
-    z-index: 3;
+
+
+}
+
+.key-white:active {
+    background-color: #dddddd;
+}
+.key-black:active {
+background: black;
 }
